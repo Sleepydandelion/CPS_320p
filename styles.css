@@ -59,18 +59,19 @@ header {
     align-items: center;
 }
 
-.header__button {
+.header__button,
+.footer__button {
     width: 40px;
     height: 40px;
     margin: 24px 8px;
     text-decoration: none;
+    transition: opacity 0.2s ease-out;
 }
 
 @media (hover: hover) {
     .header__button:hover,
     .footer__button:hover {
         opacity: 0.5;
-        /* filter: drop-shadow(2px 2px var(--color-gray)); */
     }
 }
 
@@ -113,6 +114,7 @@ header {
     border: 2px solid var(--var(--color-white));
     border-radius: 6px;
     text-align: left;
+    transition: color 0.2s ease-in;
 }
 
 .navigation__button--active {
@@ -131,8 +133,13 @@ header {
     background: var(--color-blue);
 }
 
-.navigation__button:hover {
-    color: var(--color-gray);
+@media (hover: hover) {
+    .navigation__button:hover {
+        color: var(--color-gray);
+    }
+    .navigation__button--active:hover {
+        color: var(--text-color);
+    }
 }
 
 .footer {
@@ -150,13 +157,6 @@ header {
     padding: 0;
 }
 
-.footer__button {
-    width: 40px;
-    height: 40px;
-    margin: 24px 8px;
-    text-decoration: none;
-}
-
 .footer__email,
 .footer__phone,
 .footer__lang--active {
@@ -171,14 +171,20 @@ header {
 .footer__lang {
     text-transform: uppercase;
     font-weight: 500;
+    transition: color 0.2s ease-in;
 }
 
 .footer__lang--active {
     color: var(--color-gray);
 }
 
-.footer__lang:hover {
-    color: var(--color-gray);
+@media (hover: hover) {
+    .footer__lang:hover {
+        color: var(--color-gray);
+    }
+    .footer__lang--active:hover {
+        color: var(--text-color);
+    }
 }
 
 .footer__email {
