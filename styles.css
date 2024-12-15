@@ -27,6 +27,7 @@
     --color-gray: #7e7e82;
     --color-blue: #41f6d7;
     --color-hover-blue: #b8ffec;
+    --color-light-gray: #c7c7ca;
 
     --main-color: #f8f8f8;
     --text-color: #1b1c21;
@@ -130,6 +131,10 @@ header {
     background: var(--color-blue);
 }
 
+.navigation__button:hover {
+    color: var(--color-gray);
+}
+
 .footer {
     margin-top: 150px;
     margin-bottom: 50px;
@@ -169,6 +174,10 @@ header {
 }
 
 .footer__lang--active {
+    color: var(--color-gray);
+}
+
+.footer__lang:hover {
     color: var(--color-gray);
 }
 
